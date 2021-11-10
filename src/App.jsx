@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import NavbarOnlyLogo from './components/NavbarOnlyLogo'
 import { motion } from 'framer-motion'
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
         transition={{ duration: 1.5 }}
       >
         <div>
-          <Navbar />
+          {/* <Navbar /> */}
+          <NavbarOnlyLogo />
         </div>
 
         <Outlet />

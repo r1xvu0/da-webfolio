@@ -11,7 +11,6 @@ import {
   VStack,
   IconButton,
   CloseButton,
-  Text,
 } from '@chakra-ui/react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { Link, NavLink } from 'react-router-dom'
