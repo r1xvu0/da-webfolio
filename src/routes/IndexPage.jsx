@@ -11,7 +11,7 @@ export default function IndexPage() {
         topTitle="Another NFT Project - ETA (2022)"
         title="Simple NFT RPG"
         description="SNR is new NFT Project that also incorporates a very simple RPG elements for you to enjoy. Project is aimed to hopefuly launch in early 2022."
-        tools="React, Web3, Supabase?"
+        tools="React, Web3, Supabase"
       />
       <CallRight
         image="https://ipfs.io/ipfs/Qma61dDDjWRnpgKiBwuAit85RXUKXpCDxsnizritFJBVju?filename=avaxbobs_banner.png"
