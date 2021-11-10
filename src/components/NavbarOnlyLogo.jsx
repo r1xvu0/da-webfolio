@@ -6,6 +6,7 @@ import {
   Image,
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import logo from '../public/r1xvu0logo.png'
 
 export default function NavbarOnlyLogo() {
 
@@ -25,7 +26,7 @@ export default function NavbarOnlyLogo() {
           <Flex alignitems="center" align="center">
             <Link to="/">
               <HStack>
-                <Image w={64} h={64} src={"src\public\r1xvu0logo.png"} />
+                <Image w={64} h={64} src={logo} />
               </HStack>
             </Link>
           </Flex>
