@@ -28,6 +28,7 @@ export default function Navbar() {
           px={{ base: 2, sm: 4 }}
           py={4}
           shadow="md"
+          position="absolute"
         >
           <Flex alignItems="center" justifyContent="space-around" mx="auto">
             <Flex>

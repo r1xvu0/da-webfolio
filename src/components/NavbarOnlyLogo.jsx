@@ -14,6 +14,8 @@ export default function NavbarOnlyLogo() {
     <chakra.header
       w="full"
       overflowY="hidden"
+      position="fixed"
+      zIndex="99"
     >
       <chakra.div h="10rem" mx="auto" maxW="1200px">
         <Flex
