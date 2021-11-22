@@ -90,9 +90,16 @@ const CallRight = (props) => {
                 whileTap={{ scale: 0.8 }}
               >
                 <Box display="inline-flex" rounded="md" shadow="md">
-                  <Button as="a" href={props.link} target="_blank">
+                  {props.btnLink ? (
+                    <Link to={props.btnLink}>
+                      <Button>{props.btnText}</Button>
+                      </Link>
+                  ) : (
+                    <Button as="a" href={props.link} target="_blank">
                     {props.btnText}
                   </Button>
+                  )}
+                  
                 </Box>
               </motion.button>
             ) : (

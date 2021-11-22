@@ -20,6 +20,7 @@ export default function IndexPage() {
         description="Fantomies are upcomming FTM/Polygon Network NFT. Currently I'm working on the Pixel Art and will soon move to the programming of Smart Contract."
         tools="Pixelorama, Solidity, React, Web3"
         btnText="Find out More"
+        btnLink="nft-fantoms"
         link="https://r1xvu0.vercel.app/nft-fantoms"
         />
       <CallRight

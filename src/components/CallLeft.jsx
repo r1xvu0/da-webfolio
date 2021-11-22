@@ -13,6 +13,7 @@ import {
 import { FiExternalLink } from 'react-icons/fi'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-router-dom'
 
 const CallLeft = (props) => {
   const controls = useAnimation()
@@ -104,9 +105,16 @@ const CallLeft = (props) => {
                 whileTap={{ scale: 0.8 }}
               >
                 <Box display="inline-flex" rounded="md" shadow="md">
-                  <Button as="a" href={props.link} target="_blank">
+                  {props.btnLink ? (
+                    <Link to={props.btnLink}>
+                      <Button>{props.btnText}</Button>
+                      </Link>
+                  ) : (
+                    <Button as="a" href={props.link} target="_blank">
                     {props.btnText}
                   </Button>
+                  )}
+                  
                 </Box>
               </motion.button>
             ) : (
