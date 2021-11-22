@@ -8,11 +8,12 @@ import App from './App'
 import IndexPage from './routes/IndexPage'
 import ErrorPage from './routes/ErrorPage'
 import FantomiesPage from './routes/FantomiesPage'
+import { HashRouter } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
     <ColorModeScript />
-    <BrowserRouter>
+    <HashRouter>
       <ChakraProvider theme={theme}>
         <Routes>
           <Route path="/" element={<App />}>
@@ -25,7 +26,7 @@ ReactDOM.render(
           />
         </Routes>
       </ChakraProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root'),
 )
