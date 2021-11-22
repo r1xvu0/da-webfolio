@@ -6,13 +6,22 @@ export default function IndexPage() {
   return (
     <>
       <Hero />
-      <CallLeft
+      <CallRight
         image="https://simple-nft-rpg.vercel.app/pixel-bg.jpg"
         topTitle="Another NFT Project - ETA (2022)"
         title="Simple NFT RPG"
         description="SNR is new NFT Project that also incorporates a very simple RPG elements for you to enjoy. Project is aimed to hopefuly launch in early 2022."
         tools="React, Web3, Supabase"
       />
+      <CallLeft
+        image="https://i.ibb.co/ZYXw11D/fantomies.png"
+        topTitle="NFT on Fantom Network"
+        title="Fantomies NFT"
+        description="Fantomies are upcomming FTM/Polygon Network NFT. Currently I'm working on the Pixel Art and will soon move to the programming of Smart Contract."
+        tools="Pixelorama, Solidity, React, Web3"
+        btnText="Find out More"
+        link="https://r1xvu0.vercel.app/nft-fantoms"
+        />
       <CallRight
         image="https://ipfs.io/ipfs/Qma61dDDjWRnpgKiBwuAit85RXUKXpCDxsnizritFJBVju?filename=avaxbobs_banner.png"
         topTitle="NFT Project LIVE on Rinkeby"

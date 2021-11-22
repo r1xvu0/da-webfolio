@@ -41,9 +41,8 @@ const CallLeft = (props) => {
         <Flex bg="">
           <Image
             src={props.image}
-            // src={"../public/logo.svg"}
             alt="Watching the Universe"
-            fit="cover"
+            fit="contain"
             w="full"
             h={{ base: 64, md: 512 }}
             bg=""

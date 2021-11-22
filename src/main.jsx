@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
 import IndexPage from './routes/IndexPage'
 import ErrorPage from './routes/ErrorPage'
+import FantomiesPage from './routes/FantomiesPage'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<IndexPage />} />
+            <Route path="nft-fantoms" element={<FantomiesPage />} />
           </Route>
           <Route
             path="*"

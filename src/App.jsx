@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import NavbarOnlyLogo from './components/NavbarOnlyLogo'
+import NavbarWithMobile from './components/NavbarWithMobile'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
@@ -25,7 +26,8 @@ function App() {
       >
         <div>
           {/* <Navbar /> */}
-          <NavbarOnlyLogo />
+          {/* <NavbarOnlyLogo /> */}
+          <NavbarWithMobile />
         </div>
         <Outlet />
       </motion.div>

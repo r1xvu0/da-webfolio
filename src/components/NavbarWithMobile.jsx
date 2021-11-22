@@ -1,14 +1,28 @@
 import React from 'react'
-import { chakra, HStack, Flex, Image, Text, Stack, Center, Button, IconButton } from '@chakra-ui/react'
+import {
+  chakra,
+  Box,
+  HStack,
+  VStack,
+  Flex,
+  Image,
+  Text,
+  Stack,
+  Center,
+  Button,
+  IconButton,
+  CloseButton,
+} from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/hooks'
 import { Link } from 'react-router-dom'
 import logo from '../public/r1xvu0logo.png'
 import polygon from '../public/polygon.svg'
-import { motion, useViewportScroll } from 'framer-motion'
+import { motion, useAnimation, useViewportScroll } from 'framer-motion'
 import { AiOutlineMenu } from 'react-icons/ai'
 
-
-export default function NavbarOnlyLogo() {
+export default function NavbarWithMobile() {
   const { scrollY } = useViewportScroll()
+  const controls = useAnimation()
 
   const [hidden, setHidden] = React.useState(false)
 
@@ -28,6 +42,40 @@ export default function NavbarOnlyLogo() {
   React.useEffect(() => {
     return scrollY.onChange(() => update())
   })
+
+  const mobileNav = useDisclosure()
+
+  const MobileNavContent = (
+    <VStack
+      bg="gray.700"
+      maxW="120px"
+      mx="auto"
+      position="absolute"
+      top={0}
+      left={0}
+      right={0}
+      display={mobileNav.isOpen ? 'flex' : 'none'}
+      flexDirection="column"
+      p={2}
+      pb={4}
+      m={2}
+      spacing={3}
+      rounded="lg"
+      shadow="md"
+    >
+      <CloseButton
+        aria-label="Close Menu"
+        justifySelf="self-start"
+        onClick={mobileNav.onClose}
+      />
+      <Button w="full" variant="ghost">
+        Home
+      </Button>
+      <Button w="full" variant="ghost">
+        Blog
+      </Button>
+    </VStack>
+  )
 
   return (
     <chakra.header w="full" overflowY="hidden" position="fixed" zIndex="99">
@@ -56,10 +104,17 @@ export default function NavbarOnlyLogo() {
           </Flex>
         </chakra.div>
         <Center>
-            <Stack zIndex={99} top={0} left={0} mb={24}>
-              <IconButton variant="ghost" icon={<AiOutlineMenu />} />
-            </Stack>
+          <Stack top={0} left={0} mb={24}>
+            <IconButton
+              _focus="none"
+              variant="ghost"
+              icon={<AiOutlineMenu />}
+              onClick={mobileNav.isOpen ? mobileNav.onClose : mobileNav.onOpen}
+            />
+          </Stack>
         </Center>
+
+        {MobileNavContent}
       </motion.nav>
     </chakra.header>
   )
