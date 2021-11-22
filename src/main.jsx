@@ -17,10 +17,8 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<IndexPage />} />
+            <Route path="nft-fantoms" element={<FantomiesPage />} />
           </Route>
-          <Route exact path="/nft-fantoms" element={<App />}>
-            <Route index element={<FantomiesPage />} />
-            </Route>
           <Route
             path="*"
             element={ <ErrorPage /> }
